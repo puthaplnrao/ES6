@@ -17,6 +17,7 @@ console.log('add(2,3)=', add(2, 3), 'square(4)=', square(4));
 
 // 3) Default parameters, rest and spread
 function greet(name = 'Guest', ...tags) {
+    console.log('tags :',tags);
     return `Hello, ${name}! Tags: ${tags.join(', ')}`;
 }
 console.log(greet()); // uses default
@@ -48,11 +49,13 @@ const obj = {
 };
 console.log('obj:', obj, obj.greet('Hi'), obj.dynamicKey);
 
+
 // 7) Object.assign and enhanced object operations
 const defaults = { a: 1, b: 2 };
 const options = { b: 3, c: 4 };
 const merged = Object.assign({}, defaults, options);
 console.log('merged:', merged);
+
 
 // 8) Classes, inheritance, static methods, getters/setters
 class Animal {
@@ -80,6 +83,7 @@ class Dog extends Animal {
 }
 const dog = new Dog('Rex', 'Shepherd');
 console.log(dog.speak(), dog.details, Dog.info());
+
 
 // 9) Promises (ES6)
 function wait(ms, value) {
@@ -117,7 +121,7 @@ console.log('symbol prop:', o[sym], 'normal:', o.normal);
 
 // 14) Array.from, Array.of, find, includes, findIndex, entries/keys/values
 console.log('Array.from("abc"):', Array.from('abc'));
-console.log('Array.of(7):', Array.of(7));
+console.log('Array.of(7):', Array.of(71));
 console.log('includes 2?', nums2.includes(2));
 console.log('find >2:', nums2.find(x => x > 2), 'findIndex >2:', nums2.findIndex(x => x > 2));
 
